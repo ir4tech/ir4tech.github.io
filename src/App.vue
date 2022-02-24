@@ -34,5 +34,5 @@ export default {
 </script>
 
 <style>
-
+  @import './assets/styles/app.css';
 </style>
