@@ -1,6 +1,6 @@
 <template>
 
-    <hr class="w-10 h-6 mt-5 mb-12 bg-magenta mx-auto" />
+    <hr class="w-10 h-6 mt-5 mb-12 bg-primary mx-auto" />
 
     <section class="w-full mx-auto py-10 mt-3 px-2 sm:w-3/5 bg-purple-50 rounded-lg p-10" id="contact-us">
         

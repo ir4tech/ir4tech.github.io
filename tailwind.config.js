@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         'dark-navy': '#314163',
         'light-navy': '#7284A6',
-        'magenta': '#836EE6'
+        'primary': '#836EE6'
       },
       height: {
         '6': '6px'

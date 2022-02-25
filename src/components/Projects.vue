@@ -2,7 +2,7 @@
 
     <section class="w-full mx-auto py-10 mt-3 px-2 sm:w-3/5" id="projects">
         <div class="w-full">
-            <hr class="w-10 h-6 mb-6 bg-magenta" />
+            <hr class="w-10 h-6 mb-6 bg-primary" />
             <h2 class="text-heading text-5xl text-dark-navy font-dark mb-6">Projects</h2>
             <p class="text-light-navy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
