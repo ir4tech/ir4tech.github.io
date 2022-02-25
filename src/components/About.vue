@@ -2,14 +2,14 @@
 
     <section class="w-full mx-auto py-10 mt-8 px-2 sm:w-3/5">
         <div class="flex flex-wrap">
-            <div class="sm:w-1/2 w-full">
+            <div class="sm:w-2/3 w-full">
                 <hr class="w-10 h-6 mb-6 bg-primary" />
                 <h2 class="text-heading text-5xl text-dark-navy font-dark mb-6">About Us</h2>
                 <p class="text-light-navy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
-            <div class="w-1/2">
-                <img src="../assets/images/avalanche-logo.png" />
+            <div class="sm:w-1/3 w-full">
+                <img src="../assets/images/blockchain.png" class="object-contain w-56 sm:ml-auto mx-auto mt-8 " />
             </div>
         </div>
 
