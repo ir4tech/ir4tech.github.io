@@ -1,6 +1,6 @@
 <template>
 
-    <div id="app">
+    <div id="app" class="bg-cover bg-repeat bg-center bg-origin-border bg-clip-border bg-[url('../images/bg-dots.png')] font-body">
         <HeaderComponent /> 
         <HeroComponent /> 
         <AboutComponent /> 
