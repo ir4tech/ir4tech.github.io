@@ -1,5 +1,5 @@
 <template>
-    <footer></footer>
+    <footer class="mt-12"></footer>
 </template>
 
 <script>

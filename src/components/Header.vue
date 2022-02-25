@@ -10,11 +10,11 @@
             </div>
 
             <div class="basis-1/2 text-right">
-                <button 
+                <a href="#contact-us"
                     type="button" 
                     class="text-magenta hover:text-magenta border border-gray-200 hover:bg-transparent hover:border-magenta focus:ring-4 focus:ring-purple-300 font-light rounded-full text-sm px-5 py-2.5 text-center font-heading text-upperase">
                     Contact Us    
-                </button>
+                </a>
             </div>
 
         </div>
