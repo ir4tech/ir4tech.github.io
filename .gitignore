@@ -23,3 +23,7 @@ pnpm-debug.log*
 
 # Lock files
 *.lock
+package-lock.json
+
+# Styles
+src/assets/styles/app.css
