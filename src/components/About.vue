@@ -4,8 +4,15 @@
         <div class="flex flex-wrap">
             <div class="sm:w-2/3 w-full">
                 <hr class="w-10 h-6 mb-6 bg-primary" />
-                <h2 class="text-heading text-5xl text-dark-navy font-dark mb-6">About Us</h2>
-                <p class="text-light-navy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h2 class="text-heading text-5xl text-dark-navy font-dark mb-6">
+                    About Us
+                </h2>
+                <p class="text-light-navy">
+                    We leverage emerging technology to build bespoke protocols. Thanks to innovations in distributed computing,
+                    decentralised and leaderless virtual machines can now rival the power of centralised leadered services
+                    run in large data centres. User owned protocols with the right incentive models can even provide far greater
+                    availability and redundancy levels that centralised services.
+                </p>
             </div>
 
             <div class="sm:w-1/3 w-full">
@@ -15,40 +22,19 @@
 
         <div class="flex flex-wrap pt-12">
 
-            <div class="sm:w-1/3 w-full mb-12 mt-6 pr-5">
-                <ChartSquareBarIcon class="bg-primary text-white w-10 p-1 rounded-full" />
-                <h4 class="text-dark-navy text-xl font-heading mt-6 font-light">Service Title</h4>
-                <p class="text-light-navy text-sm mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-
-            <div class="sm:w-1/3 w-full mb-12 mt-6 pr-5">
-                <ChipIcon class="bg-primary text-white w-10 p-1 rounded-full" />
-                <h4 class="text-dark-navy text-xl font-heading mt-6 font-light">Service Title</h4>
-                <p class="text-light-navy text-sm mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <div class="sm:w-1/3 w-full mb-12 mt-6 pr-5">
-                <CreditCardIcon class="bg-primary text-white w-10 p-1 rounded-full" />
-                <h4 class="text-dark-navy text-xl font-heading mt-6 font-light">Service Title</h4>
-                <p class="text-light-navy text-sm mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <div class="sm:w-1/3 w-full mb-12 mt-6 pr-5">
-                <EyeOffIcon class="bg-primary text-white w-10 p-1 rounded-full" />
-                <h4 class="text-dark-navy text-xl font-heading mt-6 font-light">Service Title</h4>
-                <p class="text-light-navy text-sm mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <div class="sm:w-1/3 w-full mb-12 mt-6 pr-5">
-                <HandIcon class="bg-primary text-white w-10 p-1 rounded-full" />
-                <h4 class="text-dark-navy text-xl font-heading mt-6 font-light">Service Title</h4>
-                <p class="text-light-navy text-sm mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <div class="sm:w-1/3 w-full mb-12 mt-6 pr-5">
-                <LibraryIcon class="bg-primary text-white w-10 p-1 rounded-full" /> 
-                <h4 class="text-dark-navy text-xl font-heading mt-6 font-light">Service Title</h4>
-                <p class="text-light-navy text-sm mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="sm:w-1/3 w-full mb-12 mt-6 pr-5" v-for="project in projects" :key="project.id">
+                <ChartSquareBarIcon class="bg-primary text-white w-10 p-1 rounded-full" v-if="project.type == 'chart'" />
+                <ChipIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'chip'"/>
+                <CreditCardIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'credit'" />
+                <EyeOffIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'eye'"/>
+                <HandIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'hand'"/>
+                <LibraryIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else /> 
+                <h4 class="text-dark-navy text-xl font-heading mt-6 font-light" >
+                    {{ project.title }}
+                </h4>
+                <p class="text-light-navy text-sm mt-3">
+                    {{ project.blurb }}
+                </p>
             </div>
 
         </div>
@@ -62,6 +48,18 @@
 
     export default {
         name: 'AboutComponent',
-        components: { ChartSquareBarIcon, ChipIcon, CreditCardIcon, EyeOffIcon, HandIcon, LibraryIcon }
+        components: { ChartSquareBarIcon, ChipIcon, CreditCardIcon, EyeOffIcon, HandIcon, LibraryIcon },
+        data: function () {
+            return {
+                projects: [
+                    {id: 1, title: 'Infinite Replication', type: 'chart', blurb: 'Scaling up and down to thousands or tens of thousands of nodes without the need for cluster rebalancing or sharding'},
+                    {id: 2, title: 'Highly Available', type: 'chip', blurb: 'Not bound by just where you can source data centres, open participation allows truly global service infrastructure'},
+                    {id: 3, title: 'Quiescence', type: 'credit', blurb: 'Our protocols are Green. They only work when you have work to do'},
+                    {id: 5, title: 'Leaderless', type: 'eye', blurb: "Don't stop work if your leader node stops responding. Leaderless protocols allow you to always generate work when it is required"},
+                    {id: 4, title: 'Decentralised', type: 'hand', blurb: 'Reliance on centralisation adds a maintaince burden. Decentralised services take on a life of their own and can become self-healing.'},
+                    {id: 6, title: 'Auditability', type: 'library', blurb: 'Be reassured that your data is correct and auditable through its entire history'},
+                ]
+            }
+        }
     }
 </script>
