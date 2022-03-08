@@ -11,15 +11,17 @@
                 <p class="text-base text-light-navy">Drop us an email or find us through our social media.</p>
 
                 <div class="flex flex-row flex-wrap justify-start mt-6">
-                    <a href="#" class="w-10 p-2 bg-purple-200 rounded-full mr-3">
+                    <a href="https://twitter.com/IR4_Tech" class="w-10 p-2 bg-purple-200 rounded-full mr-3">
                         <img src="../assets/images/twitter.svg" alt="IR4 Official Twitter account" />
                     </a>
-                    <a href="#" class="w-10 p-2 bg-purple-200 rounded-full mr-3">
+                    <a href="https://github.com/ir4tech" class="w-10 p-2 bg-purple-200 rounded-full mr-3">
                         <img src="../assets/images/github.svg" alt="IR4 Official GitHub" />
                     </a>
+                    <!--
                     <a href="#" class="w-10 p-2 bg-purple-200 rounded-full mr-3">
                         <img src="../assets/images/linked-in.svg" alt="IR4 Official LinkedIn account" />
                     </a>
+                    -->
                 </div>
             </div>
 
