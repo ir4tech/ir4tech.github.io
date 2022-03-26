@@ -20,14 +20,14 @@
           </a>
           <div class="p-6">
             <h5 class="text-dark-navy text-xl text-heading font-dark mb-2">
-              $name
+              {{project.name}}
             </h5>
             <p class="text-light-navy text-sm mb-4">
-              NFT Tokenised game with beautiful art and fun mechanics
+              {{project.taglink}}
             </p>
             <div class="text-center w-full py-5">
               <a
-                href="#"
+                :href="project.link"
                 class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 rounded-full px-4 py-3 text-center uppercase font-heading text-sm font-light"
               >
                 View project
