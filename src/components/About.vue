@@ -8,10 +8,8 @@
                     About Us
                 </h2>
                 <p class="text-light-navy">
-                    We leverage emerging technology to build bespoke protocols. Thanks to innovations in distributed computing,
-                    decentralised and leaderless virtual machines can now rival the power of centralised leadered services
-                    run in large data centres. User owned protocols with the right incentive models can even provide far greater
-                    availability and redundancy levels that centralised services.
+                    We are building decentralised and public good software and protocols that leverage the Avalanche platform.
+                    We aim to grow the network and support the network through commercial enterprise and self-sufficient public utilities.
                 </p>
             </div>
 
@@ -21,13 +19,15 @@
         </div>
 
         <div class="flex flex-wrap pt-12">
-
+            <h2 class="text-light-navy mb-5">
+                By building on the avalanche platform all our products benefit from these inherited properties.
+            </h2>
             <div class="sm:w-1/3 w-full mb-12 mt-6 pr-5" v-for="project in projects" :key="project.id">
-                <ChartSquareBarIcon class="bg-primary text-white w-10 p-1 rounded-full" v-if="project.type == 'chart'" />
+                <ArrowsExpandIcon class="bg-primary text-white w-10 p-1 rounded-full" v-if="project.type == 'chart'" />
                 <ChipIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'chip'"/>
-                <CreditCardIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'credit'" />
+                <EmojiHappyIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'credit'" />
                 <EyeOffIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'eye'"/>
-                <HandIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'hand'"/>
+                <ViewGridIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else-if="project.type == 'hand'"/>
                 <LibraryIcon class="bg-primary text-white w-10 p-1 rounded-full" v-else /> 
                 <h4 class="text-dark-navy text-xl font-heading mt-6 font-light" >
                     {{ project.title }}
@@ -44,11 +44,11 @@
 </template>
 
 <script>
-    import { ChartSquareBarIcon, ChipIcon, CreditCardIcon, EyeOffIcon, HandIcon, LibraryIcon } from '@heroicons/vue/solid'
+    import { ArrowsExpandIcon, ChipIcon, EyeOffIcon, LibraryIcon, EmojiHappyIcon, ViewGridIcon } from '@heroicons/vue/solid'
 
     export default {
         name: 'AboutComponent',
-        components: { ChartSquareBarIcon, ChipIcon, CreditCardIcon, EyeOffIcon, HandIcon, LibraryIcon },
+        components: { ArrowsExpandIcon, EmojiHappyIcon, ChipIcon, EyeOffIcon, LibraryIcon, ViewGridIcon },
         data: function () {
             return {
                 projects: [

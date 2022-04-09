@@ -53,7 +53,7 @@ export default {
       projects: [
         {
           name: "Jurassicc Farm",
-          taglink: "NFT Tokenised game with beautiful art and fun mechanics",
+          taglink: "Building a community through memetic NFT ownership and token gameplay with beautiful art",
           link: "https://raptor.farm",
           image: "../assets/images/raptr.png"
         },
